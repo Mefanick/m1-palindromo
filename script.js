@@ -5,8 +5,8 @@ function isPalindrome(str){
     for (let i = contagem; i >= 0; i--) {
         increment = increment + str[i]
     }
-    let palavraAoContrario = increment.replace(/ /gi, '').toLowerCase();
-    let palavraNormal = str.replace(/ /gi, '').toLowerCase();
+    let palavraAoContrario = increment.replaceAll(' ', '').toLowerCase();
+    let palavraNormal = str.replaceAll(' ', '').toLowerCase();
     if(palavraNormal === palavraAoContrario){
         return true;
     } else {
