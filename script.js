@@ -1,16 +1,12 @@
 function isPalindrome(str){
     /* Seu código aqui */
-    function incrementTextBackwards(palavra) {
-        let contagem = palavra.length - 1;
-        let increment = "";
-        for (let i = contagem; i >= 0; i--) {
-            increment = increment + palavra[i]
-        }     
-        return increment;
+    let contagem = str.length - 1;
+    let increment = "";
+    for (let i = contagem; i >= 0; i--) {
+        increment = increment + str[i]
     }
-    let palavraSemEspacos = str.replace(/ /gi, '');
-    let palavraAoContrario = incrementTextBackwards(palavraSemEspacos).toLowerCase();
-    let palavraNormal = palavraSemEspacos.toLowerCase();
+    let palavraAoContrario = increment.replace(/ /gi, '').toLowerCase();
+    let palavraNormal = str.replace(/ /gi, '').toLowerCase();
     if(palavraNormal === palavraAoContrario){
         return true;
     } else {
@@ -25,8 +21,6 @@ function arrayMaxMin(arr){
         if(arr[i] > maiorArray){
             maiorArray = arr[i]
         }
-    }
-    for (let i = 0; i < arr.length; i++) {
         if(arr[i] < menorArray){
             menorArray = arr[i]
         }
